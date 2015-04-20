@@ -10,36 +10,43 @@
 	</head>
 
 	<body>
-		<div class = "input">
+		<div class="input">
 	  	  <form id="input">
-			<label for="name"> Name: <input type="text" name="name" id="Name"/></label>
+			<label for="name"> Name: </label>
+			<input type="text" name="name" id="Name"/>
 
-			<br><label for="strength"> Strength: <input type="text" name="strength" id="strength"/></label>
+			<br><label for="strength"> Strength: </label>
+			<input type="text" name="strength" id="strength"/>
 
-			<br><label for="dexterity"> Dexterity: <input type="text" name="dexterity" id="dexterity"/></label>
+			<br><label for="dexterity"> Dexterity: </label>
+			<input type="text" name="dexterity" id="dexterity"/>
 
 			<br><label for="constitution"> Constitution: <input type="text" name="constitution" id="constitution"/></label>
 
-			<br><label for="wisdom"> Wisdom: <input type="text" name="wisdom" id="wisdom"/></label>
+			<br><label for="wisdom"> Wisdom: </label>
+			<input type="text" name="wisdom" id="wisdom"/>
 
-			<br><label for="intelligence"> Intelligence: <input type="text" name="intelligence" id="intelligence"/></label>
+			<br><label for="intelligence"> Intelligence: </label>
+			<input type="text" name="intelligence" id="intelligence"/>
 
-			<br><label for="charisma"> Charisma: <input type="text" name="charisma" id="charisma"/></label>
+			<br><label for="charisma"> Charisma: </label>
+			<input type="text" name="charisma" id="charisma"/>
 
-			<br><label for="player"> Player Class (optional): <input type="text" name="player" id="player"/></label>
+			<br><label for="player"> Player Class (optional): </label>
+			<input type="text" name="player" id="player"/>
 		</div>
-		 	<button type="button" id="addMonster">Add Player/Monster to Records</button>
+		 	<button type="button" id="addMonster" onclick="addMonster(this);">Add Player/Monster to Records</button>
 		 </form>
 		<table id="table">
 		  <tr>
-		    <th>Name</th>
-		    <th>Strength</th>
-		    <th>Dexterity</th>
-		    <th>Consitution</th>
-		    <th>Wisdom</th>
-		    <th>Intelligence</th>
-		    <th>Charisma</th>
-		    <th>Player Class (optional)</th>			    
+		    <th id="row1">Name</th>
+		    <th id="row1">Strength</th>
+		    <th id="row1">Dexterity</th>
+		    <th id="row1">Consitution</th>
+		    <th id="row1">Wisdom</th>
+		    <th id="row1">Intelligence</th>
+		    <th id="row1">Charisma</th>
+		    <th id="row1">Player Class (optional)</th>			    
 		  </tr>
 		</table>
 	</body>
