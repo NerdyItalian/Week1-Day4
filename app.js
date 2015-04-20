@@ -19,12 +19,20 @@ Player.prototype.constructor = Player;
 var playerInfo = [];
 
 function addMonster(){
-	var name = document.getElementById("name").innerHTML('click', Player);
-	var dexterity = document.getElementById("dexterity").innerHTML('click', Player);
-	var constitution = document.getElementById("constitution").innerHTML('click', Player);
-	var wisdom = document.getElementById("wisdom").innerHTML('click', Player);
-	var intelligence = document.getElementById("intelligence").innerHTML('click', Player);
-	var charisma = document.getElementById("charisma").innerHTML('click', Player);
+	var name = document.getElementById("name").value;
+	var strength = document.getElementById("strength").value;
+	var dexterity = document.getElementById("dexterity").value;
+	var wisdom = document.getElementById("wisdom").value;
+	var intelligence = document.getElementById("intelligence").value;
+	var charisma = document.getElementById("charisma").value;
+	var playerClass = document.getElementById("player").value;
+	if (playerClass != ""){
+		var bear = new Player(name, strength, dexterity, constitution, wisdom, intelligence, charisma, playerClass);
+		playerInfo.push(bear);
+	} else {
+		var bear = new Monster(name, strength, dexterity, constitution, wisdom, intelligence, charisma)
+		playerInfo.push(bear);
+	};
 }
 
 Monster.prototype = {
