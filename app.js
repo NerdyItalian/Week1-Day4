@@ -22,6 +22,7 @@ function addMonster(){
 	var name = document.getElementById("name").value;
 	var strength = document.getElementById("strength").value;
 	var dexterity = document.getElementById("dexterity").value;
+	var	constitution = document.getElementById("constitution").value;
 	var wisdom = document.getElementById("wisdom").value;
 	var intelligence = document.getElementById("intelligence").value;
 	var charisma = document.getElementById("charisma").value;
@@ -30,19 +31,35 @@ function addMonster(){
 		var bear = new Player(name, strength, dexterity, constitution, wisdom, intelligence, charisma, playerClass);
 		playerInfo.push(bear);
 	} else {
-		var bear = new Monster(name, strength, dexterity, constitution, wisdom, intelligence, charisma)
+		var bear = new Monster(name, strength, dexterity, constitution, wisdom, intelligence, charisma);
 		playerInfo.push(bear);
-	};
+	}
+	updateDisplay();
 }
 
-Monster.prototype = {
-	attack : function () {
-		return this.strength * (Math.floor(Math.random() * 20) + 1);
+function updateDisplay(){
+	var table = document.getElementById("table");
+	var row = table.insertRow(-1);
+	var monster = playerInfo[playerInfo.length - 1];
+	var statsArray = [monster.name, monster.strength, monster.dexterity, monster.constitution, monster.wisdom, monster.intelligence, monster.charisma];
+	for (var i = 0; i < statsArray.length; i++){
+		var	cell = row.insertCell(i);
+		cell.innerHTML = statsArray[i];
+	}
+	if(monster instanceof Player){
+		var cell = row.insertCell(-1);
+		cell.innerHTML = monster.playerClass;
 	}
 }
 
+
+
+Monster.prototype.attack = function () {
+		return this.strength * (Math.floor(Math.random() * 20) + 1);
+} 
+
 Player.prototype.attack = function () {
-		return this.dexterity* (Math.floor(Math.random() * 20) + 1);
+		return this.dexterity * (Math.floor(Math.random() * 20) + 1);
 }
 
 

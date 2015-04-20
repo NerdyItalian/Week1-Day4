@@ -22,7 +22,7 @@ body {
 	margin-bottom: 0px
 }
 
-#addMonster {
+.btn {
 	background-color:#07AA9E;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
