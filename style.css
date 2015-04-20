@@ -1,0 +1,43 @@
+table, th, td {
+    border: 3px solid black;
+    border-collapse: collapse;
+    width: auto;
+    height: auto;
+    background-color: #337277;
+    font-family: 'Shift', monospace;
+    color: #07AA9E;
+    font-size: 14px;
+}
+
+body {
+	background: #CCCCCC;
+}
+
+.input {
+	color: #4E4D4D;
+    font-family: 'Shift', monospace;
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 0px;
+	margin-bottom: 0px
+}
+
+#addMonster {
+	background-color:#07AA9E;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    color: #fff;
+    font-family: 'Shift', monospace;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+    margin: 10px;
+}
+
+#addMonster:hover {
+    border: none;
+    background:#337277;
+    box-shadow: 0px 0px 1px #777;
+}
